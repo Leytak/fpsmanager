@@ -251,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833bf77f6e742d347bc1a1e84c1a28e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  viewPoint: {fileID: 4848746798612416237}
 --- !u!33 &5910814596080599424
 MeshFilter:
   m_ObjectHideFlags: 0

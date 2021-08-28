@@ -20,9 +20,14 @@ public class FindTarget : ActionNode
     protected override State OnUpdate()
     {
         foreach (Player enemy in enemies)
+        {
             if (context.player.CanSee(enemy.ownCollider))
+            {
+                blackboard.aimTarget = enemy.transform;
                 return State.Success;
-        
+            }
+        }
+
         return State.Failure;
     }
 }

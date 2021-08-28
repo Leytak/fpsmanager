@@ -18,6 +18,7 @@ MonoBehaviour:
   position: {x: 275.00003, y: 376.74506}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   children:
@@ -42,6 +43,7 @@ MonoBehaviour:
   position: {x: 1, y: 213}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   children:
@@ -62,9 +64,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ec0b355c62454ce468ae25326b0a0901
-  position: {x: 120.74898, y: 511.75296}
+  position: {x: 120.167366, y: 553.63513}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   min: {x: -10, y: -10}
@@ -84,9 +87,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8b3957bde8fb3134fb32d643634cbea0
-  position: {x: -115.62808, y: 514.45}
+  position: {x: -45.990982, y: 554.498}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   message: shoot
@@ -116,8 +120,10 @@ MonoBehaviour:
   - {fileID: -3982483112816897443}
   - {fileID: 476104073551567234}
   - {fileID: 8607659613553455366}
+  - {fileID: 733241786946023527}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
 --- !u!114 &292875390839261777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +142,7 @@ MonoBehaviour:
   position: {x: 0, y: 105}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   child: {fileID: -6643665554974732701}
@@ -156,9 +163,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a416857d988fc2441b0a4fab16493447
-  position: {x: 276.74902, y: 512.7529}
+  position: {x: 276.16733, y: 554.63513}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   speed: 5
@@ -166,6 +174,27 @@ MonoBehaviour:
   updateRotation: 1
   acceleration: 40
   tolerance: 1
+--- !u!114 &733241786946023527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4586e315410bba478d19455904d3642, type: 3}
+  m_Name: Stop
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: cfac3cae3a1b07642bfa52fa33fa852a
+  position: {x: -364.991, y: 554.498}
+  blackboard:
+    moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
+  description: 
+  drawGizmos: 0
 --- !u!114 &2360468135162622647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,9 +210,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 24b3d5be62311ca4fa4f1ea3c8b8d641
-  position: {x: -275.89993, y: 514.1501}
+  position: {x: -205.991, y: 554.498}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
 --- !u!114 &5304245442024253828
@@ -204,10 +234,12 @@ MonoBehaviour:
   position: {x: -275.93503, y: 378.32004}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   children:
   - {fileID: 5833517625774654402}
+  - {fileID: 733241786946023527}
   - {fileID: 2360468135162622647}
   - {fileID: -2928451076243155980}
 --- !u!114 &5833517625774654402
@@ -225,9 +257,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d461b4049e579fc4bb408299efd5992d
-  position: {x: -437.65607, y: 515.45}
+  position: {x: -533.991, y: 554.498}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
 --- !u!114 &8607659613553455366
@@ -245,9 +278,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a5df0c146262d404bb476904dd60a1d1
-  position: {x: 434.74884, y: 512.7529}
+  position: {x: 434.16736, y: 554.63513}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   duration: 1
@@ -269,6 +303,7 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
+    aimTarget: {fileID: 0}
   description: 
   drawGizmos: 0
   child: {fileID: 292875390839261777}

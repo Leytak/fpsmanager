@@ -7,20 +7,20 @@ using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Transform viewPoint = default;
-    
+
     public NavMeshAgent agent { get; private set; }
     public Collider ownCollider { get; private set; }
     public Camera ownCamera { get; private set; }
 
-    private float yaw
+    public float yaw
     {
-        get { return transform.rotation.y; }
+        get { return transform.rotation.eulerAngles.y; }
         set { transform.rotation = Quaternion.Euler(0, value, 0); }
     }
 
-    private float pitch
+    public float pitch
     {
-        get { return viewPoint.localRotation.x; }
+        get { return viewPoint.localRotation.eulerAngles.x; }
         set { viewPoint.localRotation = Quaternion.Euler(value, 0, 0); }
     }
 
@@ -49,5 +49,13 @@ public class Player : MonoBehaviour
 
         yaw = AircraftAxes.Yaw(direction);
         pitch = AircraftAxes.Pitch(direction);
+    }
+
+    public void LerpRotation(Vector3 target, float startYaw, float startPitch, float lerpValue)
+    {
+        Vector3 direction = target - viewPoint.position;
+
+        yaw = Mathf.LerpAngle(startYaw, AircraftAxes.Yaw(direction), lerpValue);
+        pitch = Mathf.LerpAngle(startPitch, AircraftAxes.Pitch(direction), lerpValue);
     }
 }

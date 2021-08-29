@@ -21,7 +21,7 @@ public class FindTarget : ActionNode
     {
         foreach (Player enemy in enemies)
         {
-            if (context.player.CanSee(enemy.ownCollider))
+            if (context.player.CanSee(enemy.Collider))
             {
                 blackboard.aimTarget = enemy.transform;
                 return State.Success;

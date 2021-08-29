@@ -14,8 +14,8 @@ public class Aim : ActionNode
     protected override void OnStart()
     {
         startTime = Time.time;
-        startYaw = context.player.yaw;
-        startPitch = context.player.pitch;
+        startYaw = context.player.Yaw;
+        startPitch = context.player.Pitch;
     }
 
     protected override void OnStop() { }

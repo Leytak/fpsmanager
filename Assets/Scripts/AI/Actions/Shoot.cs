@@ -17,6 +17,12 @@ public class Shoot : ActionNode
 
     protected override State OnUpdate()
     {
+        if (!blackboard.IsTargetAlive())
+        {
+            blackboard.aimTarget = null;
+            return State.Failure;
+        }
+           
         if (Time.time - startTime > context.player.Gun.ShootInterval)
         {
             return State.Success;

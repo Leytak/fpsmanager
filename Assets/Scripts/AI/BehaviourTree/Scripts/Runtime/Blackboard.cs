@@ -9,5 +9,10 @@ namespace BehaviourTrees
     {
         public Vector3 moveToPosition;
         public Transform aimTarget;
+
+        public bool IsTargetAlive()
+        {
+            return aimTarget != null && aimTarget.TryGetComponent(out PlayerLife playerLife) && playerLife.IsAlive;
+        }
     }
 }

@@ -22,6 +22,12 @@ public class Aim : ActionNode
 
     protected override State OnUpdate()
     {
+        if (!blackboard.IsTargetAlive())
+        {
+            blackboard.aimTarget = null;
+            return State.Failure;
+        }
+
         if (Time.time - startTime > aimTime)
         {
             context.player.LookAt(blackboard.aimTarget.position);

@@ -32,7 +32,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Hit(int damage, Vector3 direction, Player damageDealer, HitBox.Type hitboxType)
     {
-        Debug.Log($"-{damage} ({hitboxType.ToString()})");
+        Debug.Log($"{damageDealer.name} dealth {damage} damage to {player.name} ({hitboxType.ToString()})");
 
         damage = Mathf.Min(damage, currentHealth);
         currentHealth -= damage;

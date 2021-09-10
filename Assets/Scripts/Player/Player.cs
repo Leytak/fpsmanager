@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public Collider Collider { get; private set; }
     public Camera Camera { get; private set; }
     public Gun Gun { get; private set; }
+    public Transform ViewPoint { get { return viewPoint; } }
 
     public float Yaw
     {
@@ -43,21 +44,5 @@ public class Player : MonoBehaviour
 
         return GeometryUtility.TestPlanesAABB(planes, enemyCollider.bounds)
                 && !Physics.Linecast(viewPoint.position, enemyCollider.transform.position, occlusionLayers);
-    }
-
-    public void LookAt(Vector3 target)
-    {
-        Vector3 direction = target - viewPoint.position;
-
-        Yaw = AircraftAxes.Yaw(direction);
-        Pitch = AircraftAxes.Pitch(direction);
-    }
-
-    public void LerpRotation(Vector3 target, float startYaw, float startPitch, float lerpValue)
-    {
-        Vector3 direction = target - viewPoint.position;
-
-        Yaw = Mathf.LerpAngle(startYaw, AircraftAxes.Yaw(direction), lerpValue);
-        Pitch = Mathf.LerpAngle(startPitch, AircraftAxes.Pitch(direction), lerpValue);
     }
 }

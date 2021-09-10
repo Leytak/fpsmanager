@@ -188,7 +188,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: cfac3cae3a1b07642bfa52fa33fa852a
-  position: {x: -364.991, y: 554.498}
+  position: {x: -372.60437, y: 554}
   blackboard:
     moveToPosition: {x: 0, y: 0, z: 0}
     aimTarget: {fileID: 0}

@@ -28,8 +28,6 @@ public class Shoot : ActionNode
             return State.Success;
         }
 
-        context.player.LookAt(blackboard.aimTarget.position);
-
         return State.Running;
     }
 }

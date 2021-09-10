@@ -9,6 +9,7 @@ namespace BehaviourTrees
     {
         public Vector3 moveToPosition;
         public Transform aimTarget;
+        public AircraftAxes aimAxes;
 
         public bool IsTargetAlive()
         {

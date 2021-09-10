@@ -30,11 +30,14 @@ public class Aim : ActionNode
 
         if (Time.time - startTime > aimTime)
         {
-            context.player.LookAt(blackboard.aimTarget.position);
+            context.player.Yaw = blackboard.aimAxes.Yaw;
+            context.player.Pitch = blackboard.aimAxes.Pitch;
             return State.Success;
         }
 
-        context.player.LerpRotation(blackboard.aimTarget.position, startYaw, startPitch, Time.time - startTime / aimTime);
+        float aimProgress = Time.time - startTime / aimTime;
+        context.player.Yaw = Mathf.LerpAngle(startYaw, blackboard.aimAxes.Yaw, aimProgress);
+        context.player.Pitch = Mathf.LerpAngle(startPitch, blackboard.aimAxes.Pitch, aimProgress);
 
         return State.Running;
     }
